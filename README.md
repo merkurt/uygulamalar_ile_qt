@@ -82,4 +82,4 @@ QT içerisindeki algoritmalardır. `#include <QtAlgorithms>` bünyesindedirler.
 
 [Algoritmalar dokümanı](https://doc.qt.io/qt-5/qtalgorithms-obsolete.html)
 
-[Örnekler]()
+[Örnekler](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QSwap-QSort)
