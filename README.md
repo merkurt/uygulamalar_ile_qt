@@ -104,4 +104,4 @@ qDebug() << "Rastgele sayi:" << qrand() % 10;
 ## Şifreli Hash
 ### QCryptographicHash
 * Kriptografik hash üretmek için kullanılır. `#include <QCryptographicHash>` şeklinde dahil edilir.
-[Örnek]()
+[Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QCryptographicHash)
