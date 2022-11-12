@@ -72,3 +72,14 @@ QT içerisinde QStack, QQueue, QList, QVector, QHash gibi konteyner sınıfları
 * Veriler kendilerine has key'ler ile tutulur ve bu keyler ile verilere kolayca ulaşılabilir.
 * `#include <QHash>` ile dahil edilir.
 [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QHash)
+
+## Algoritmalar
+QT içerisindeki algoritmalardır. `#include <QtAlgorithms>` bünyesindedirler.
+### QSwap
+* İki değişkenin değerlerini birbiri ile değiştirir. Pythonda `a, b = b, a` ifadesine denktir.
+### QSort
+* Bu fonksiyon ile konteyner nesneleri rahatlıkla sıralanabilir.
+
+[Algoritmalar dokümanı](https://doc.qt.io/qt-5/qtalgorithms-obsolete.html)
+
+[Örnekler]()
