@@ -100,3 +100,8 @@ QT içerisindeki algoritmalardır. `#include <QtAlgorithms>` bünyesindedirler.
 //0-10 arası rastgele bir sayı üretmek
 qDebug() << "Rastgele sayi:" << qrand() % 10;
 ```
+
+## Şifreli Hash
+### QCryptographicHash
+* Kriptografik hash üretmek için kullanılır. `#include <QCryptographicHash>` şeklinde dahil edilir.
+[Örnek]()

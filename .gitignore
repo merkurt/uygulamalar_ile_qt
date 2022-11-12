@@ -2,3 +2,4 @@ build-QStack-Desktop_Qt_5_9_2_MinGW_32bit-Debug
 build-QHash-Desktop_Qt_5_9_2_MinGW_32bit-Debug
 build-QSwap-QSort-Desktop_Qt_5_9_2_MinGW_32bit-Debug
 build-QTime-QDate-QDateTime-Desktop_Qt_5_9_2_MinGW_32bit-Debug
+build-QCryptographicHash-Desktop_Qt_5_9_2_MinGW_32bit-Debug
