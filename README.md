@@ -58,4 +58,5 @@ Bu fonksiyon dört parametre alır: sinyalin geldiği obje, signal, slotun üzer
     }
 
     ```
+    [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QTimer)
 * Eğer "QT Widgets Application" projesi içerisinde yazılacaksa bunlara gerek yoktur.
