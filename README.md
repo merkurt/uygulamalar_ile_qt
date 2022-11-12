@@ -91,3 +91,4 @@ QT içerisindeki algoritmalardır. `#include <QtAlgorithms>` bünyesindedirler.
 * `#include <QDate>` şeklinde dahil edilir. Tarih ile ilgili işlemler için kullanılır.
 ### QDateTime
 * `#include <QDateTime>` şeklinde dahil edilir. Tarih ve zaman  ile ilgili işlemler için kullanılır.
+[Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QTime-QDate-QDateTime)
