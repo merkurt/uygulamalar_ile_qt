@@ -66,3 +66,5 @@ QT içerisinde QStack, QQueue, QList, QVector, QHash gibi konteyner sınıfları
 ### QStack
 * Kendisine has dört fonksiyonu bulunmaktadır: pop, push, swap ve top.
 * QVector'ün fonksiyonlarını kalıtım ile kullanabilir. Böylece stack'in önünde veri eklenebilir veya boş olup olmadığı kontrol edilebilir.
+[Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QStack)
+
