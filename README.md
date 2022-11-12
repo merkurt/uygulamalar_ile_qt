@@ -4,7 +4,7 @@
 ### QString ve QDebug 
 * QString std::string yerine kullanılır. Tüm qt fonksiyonları ile uyumludur ve hızlıdır.
 * QDebug hata ayıklama amacıyla geliştiriciye kolaylık sağlar. "Application Output" bölümünde veri yapılarının ve fonksiyonların çıkış değerlerinin gösterilmesini sağlayan C++ sınıfıdır.
-
+[Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QString-QDebug)
 ### Signal ve Slot
 * Oluşan sinyali ilgili slot fonksiyonuna iletir. Bir nevi QT içerisindeki tetikleme mekanizmasıdır. Özellikle arayüz geliştirme ve soket programlama yapılırken önemli rol oynar.
 >
@@ -60,3 +60,9 @@ Bu fonksiyon dört parametre alır: sinyalin geldiği obje, signal, slotun üzer
     ```
     [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QTimer)
 * Eğer "QT Widgets Application" projesi içerisinde yazılacaksa bunlara gerek yoktur.
+
+## Konteyner Sınıfları
+QT içerisinde QStack, QQueue, QList, QVector, QHash gibi konteyner sınıfları barındırır. Bu sınıflar projeye dahil edilerek QT ile verimli bir şekilde kullanılır.
+### QStack
+* Kendisine has dört fonksiyonu bulunmaktadır: pop, push, swap ve top.
+* QVector'ün fonksiyonlarını kalıtım ile kullanabilir. Böylece stack'in önünde veri eklenebilir veya boş olup olmadığı kontrol edilebilir.
