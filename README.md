@@ -1,6 +1,6 @@
 # uygulamalar_ile_qt
 
-## 2- Kodlamaya Giriş
+## QT Sınıfları
 ### QString ve QDebug 
 * QString std::string yerine kullanılır. Tüm qt fonksiyonları ile uyumludur ve hızlıdır.
 * QDebug hata ayıklama amacıyla geliştiriciye kolaylık sağlar. "Application Output" bölümünde veri yapılarının ve fonksiyonların çıkış değerlerinin gösterilmesini sağlayan C++ sınıfıdır.
