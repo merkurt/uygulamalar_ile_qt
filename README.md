@@ -64,7 +64,10 @@ Bu fonksiyon dört parametre alır: sinyalin geldiği obje, signal, slotun üzer
 ## Konteyner Sınıfları
 QT içerisinde QStack, QQueue, QList, QVector, QHash gibi konteyner sınıfları barındırır. Bu sınıflar projeye dahil edilerek QT ile verimli bir şekilde kullanılır.
 ### QStack
-* Kendisine has dört fonksiyonu bulunmaktadır: pop, push, swap ve top.
+* `#include <QStack>` ile dahil edilir. Kendisine has dört fonksiyonu bulunmaktadır: pop, push, swap ve top.
 * QVector'ün fonksiyonlarını kalıtım ile kullanabilir. Böylece stack'in önünde veri eklenebilir veya boş olup olmadığı kontrol edilebilir.
 [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QStack)
 
+### QHash
+* Veriler kendilerine has key'ler ile tutulur ve bu keyler ile verilere kolayca ulaşılabilir.
+* `#include <QHash>` ile dahil edilir.
