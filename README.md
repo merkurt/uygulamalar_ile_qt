@@ -83,3 +83,11 @@ QT içerisindeki algoritmalardır. `#include <QtAlgorithms>` bünyesindedirler.
 [Algoritmalar dokümanı](https://doc.qt.io/qt-5/qtalgorithms-obsolete.html)
 
 [Örnekler](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QSwap-QSort)
+
+## Tarih ve Saat
+### QTime
+* `#include <QTime>` şeklinde dahil edilir. Zaman ile ilgili işlemler için kullanılır.
+### QDate
+* `#include <QDate>` şeklinde dahil edilir. Tarih ile ilgili işlemler için kullanılır.
+### QDateTime
+* `#include <QDateTime>` şeklinde dahil edilir. Tarih ve zaman  ile ilgili işlemler için kullanılır.
