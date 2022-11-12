@@ -92,3 +92,11 @@ QT içerisindeki algoritmalardır. `#include <QtAlgorithms>` bünyesindedirler.
 ### QDateTime
 * `#include <QDateTime>` şeklinde dahil edilir. Tarih ve zaman  ile ilgili işlemler için kullanılır.
 [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QTime-QDate-QDateTime)
+
+## Rastgele Sayı Üretmek
+### qrand
+* `qrand()` rastgele sayı üretmek için kullanılan fonksiyondur. `qrand() % ust_limit` şeklinde kullanılır.
+```
+//0-10 arası rastgele bir sayı üretmek
+qDebug() << "Rastgele sayi:" << qrand() % 10;
+```
