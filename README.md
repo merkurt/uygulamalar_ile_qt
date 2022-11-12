@@ -11,3 +11,51 @@
     connect(server, SIGNAL(newConnection()), this, SLOT(connectTo()));
 
 Bu fonksiyon dört parametre alır: sinyalin geldiği obje, signal, slotun üzerinde bulunduğu obje ve slot.
+
+### QTimer
+* Zamanlama için kullanılan bir C++ sınıfıdır. Kullanmadan önce başlık dosyasına `#include <QTimer>` eklenir.
+* Eğer "QT Console Application" projesi içeriisnde yazılacaksa `#include <QObject>` eklenmesi ve sınıf tanımlamasının yanına  `public QObject` yazılmalı. Ardından sınıf içerisinde de `Q_OBJECT` makrosu eklenmeli.
+    ```
+    // myclass.h
+    #ifndef MYCLASS_H
+    #define MYCLASS_H
+
+    #include <QObject>
+    #include <QDebug>
+    #include <QTimer>
+
+    class myclass : public QObject
+    {Q_OBJECT
+        QTimer *timerObjesi;
+        int say;
+    public:
+        myclass();
+    public slots:
+        void timerSlotu();
+    };
+
+    #endif // MYCLASS_H
+    ```
+    ```
+    // myclass.cpp
+    #include "myclass.h"
+
+    myclass::myclass()
+    {
+        say = 1;
+        timerObjesi = new QTimer(this);
+        connect(timerObjesi, SIGNAL(timeout()), this, SLOT(timerSlotu()));
+        timerObjesi->start(1000);
+    }
+
+    void myclass::timerSlotu()
+    {
+        if(say >= 5){
+            timerObjesi->stop();
+        }
+        qDebug() << "Sayiyorum" << say;
+        say++;
+    }
+
+    ```
+* Eğer "QT Widgets Application" projesi içerisinde yazılacaksa bunlara gerek yoktur.
