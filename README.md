@@ -113,3 +113,5 @@ qDebug() << "Rastgele sayi:" << qrand() % 10;
 * [Temel widget uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-1/temel-widget-uygulamasi-lab_1)
 ## Lab-2
 * [Zamanlayıcılı Loto](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-2/zamanlayicili-loto-lab_2)
+## Lab-3
+* [Hesap makinesi](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-3/hesap-makinesi-lab_3)
