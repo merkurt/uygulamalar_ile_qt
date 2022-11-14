@@ -152,7 +152,7 @@ ui->tableView->setModel(model_tablo);
 ```
 qry.exec("INSERT INTO tablo(val1, val2) VALUES('"+val1+"', '"+val2+"')");
 ```
-
+[SQLite Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/4-veritabani/veritabani-sqlite)
 
 
 # Lablar
