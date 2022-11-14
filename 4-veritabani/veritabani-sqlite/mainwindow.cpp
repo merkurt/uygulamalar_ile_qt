@@ -17,17 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
         qDebug() << "Veritabani hatasi.";
     }
 
-    QSqlQuery *qry = new QSqlQuery;
-
-    qDebug() << "Constructor" << qry->exec("SELECT * FROM kisiler");
-
-    QSqlQueryModel *kisiler_model = new QSqlQueryModel;
-
-    kisiler_model->setQuery(*qry);
-
-    ui->tableView->setModel(kisiler_model);
-
-    //veritabanindanAyril();
+    veritabaniYenile();
 }
 
 MainWindow::~MainWindow()

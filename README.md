@@ -106,6 +106,56 @@ qDebug() << "Rastgele sayi:" << qrand() % 10;
 * Kriptografik hash üretmek için kullanılır. `#include <QCryptographicHash>` şeklinde dahil edilir.
 [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QCryptographicHash)
 
+## SQLite
+### SQLite Browser
+* SQLite Browser ile veritabanlarınızı yönetebilirsiniz. [SQLite Browser](https://sqlitebrowser.org)
+* SQLite veritabanlarının uzantılarının bir önemi yoktur. Genelde `.sqlite`, `sql3` veya `.db` kullanılır.
+### SQLite QT entegrasyonu
+* Projeye SQLite'ı entegre etmek için `.pro` uzantılı proje dosyasına `QT += sql` komutu eklenir.
+```
+QT += core gui sql
+```
+* Ardından `header` dosyasına `#include <QtSql>` eklenir.
+* Veri tabanı için `QSqlDatabase` tipinde global bir değişkene ihtiyaç vardır.
+```
+QSqlDatabase veritabani;
+```
+* Veri tabanına bağlanmak için:
+```
+veritabani = QSqlDatabase::addDatabase("QSQLITE");
+veritabani.setDatabaseName('database_konumu');
+veritabani.open();
+```
+* Veri tabanından ayrılmak için:
+```
+veritabani.close();
+veritabani.removeDatabase(QSqlDatabase::defaultConnection);
+```
+* Veri tabanında SQL komutları çalıştırmak:
+```
+QSqlQuery qry;
+qry.exec("SQL KOMUTU");
+```
+### Table View Widget Bağlantısı
+* `.ui` dosyasına `Table View Widget` eklenir.
+```
+QSqlQuery *qry = new QSqlQuery;
+
+qry->exec("SELECT * FROM * tablo_ismi");
+
+QSqlQueryModel *model_tablo = new QSqlQueryModel;
+
+model_tablo->setQuery(*qry);
+ui->tableView->setModel(model_tablo);
+```
+* Aynı zamanda tabloyu yenilemek için de bu kod parçası kullanılabilir.
+### Değişkenler ile SQL komutları çalıştırmak
+* Değişkenler `'"+degisken+"'` şeklinde ifade edilir.
+```
+qry.exec("INSERT INTO tablo(val1, val2) VALUES('"+val1+"', '"+val2+"')");
+```
+
+
 
 # Lablar
 ## Lab-1
