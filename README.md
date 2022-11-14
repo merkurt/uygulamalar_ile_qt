@@ -1,6 +1,4 @@
-# uygulamalar_ile_qt
-
-## QT Sınıfları
+# QT Sınıfları
 ### QString ve QDebug 
 * QString std::string yerine kullanılır. Tüm qt fonksiyonları ile uyumludur ve hızlıdır.
 * QDebug hata ayıklama amacıyla geliştiriciye kolaylık sağlar. "Application Output" bölümünde veri yapılarının ve fonksiyonların çıkış değerlerinin gösterilmesini sağlayan C++ sınıfıdır.
@@ -106,7 +104,7 @@ qDebug() << "Rastgele sayi:" << qrand() % 10;
 * Kriptografik hash üretmek için kullanılır. `#include <QCryptographicHash>` şeklinde dahil edilir.
 [Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/2-kodlamaya_giris/QCryptographicHash)
 
-## SQLite
+# SQLite
 ### SQLite Browser
 * SQLite Browser ile veritabanlarınızı yönetebilirsiniz. [SQLite Browser](https://sqlitebrowser.org)
 * SQLite veritabanlarının uzantılarının bir önemi yoktur. Genelde `.sqlite`, `sql3` veya `.db` kullanılır.
