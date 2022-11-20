@@ -163,3 +163,5 @@ qry.exec("INSERT INTO tablo(val1, val2) VALUES('"+val1+"', '"+val2+"')");
 * [Zamanlayıcılı Loto](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-2/zamanlayicili-loto-lab_2)
 ## Lab-3
 * [Hesap makinesi](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-3/hesap-makinesi-lab_3)
+## Lab-4
+* [Giriş ve Kayıt Uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-4/giris-ve-kayit-lab_4)
