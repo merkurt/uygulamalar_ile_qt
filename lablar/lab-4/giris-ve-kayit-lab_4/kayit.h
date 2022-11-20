@@ -19,6 +19,11 @@ class kayit : public QWidget
 
 public:
     explicit kayit(QWidget *parent = 0);
+    QSqlDatabase veritabani;
+
+    bool baglantiyiAC();
+    void baglantiyiKapat();
+
     ~kayit();
 
 private slots:
@@ -27,10 +32,7 @@ private slots:
 private:
     Ui::kayit *ui;
 
-    QSqlDatabase veritabani;
 
-    bool baglantiyiAC();
-    void baglantiyiKapat();
 };
 
 #endif // KAYIT_H

@@ -16,7 +16,7 @@ kayit::~kayit()
 bool kayit::baglantiyiAC()
 {
     veritabani = QSqlDatabase::addDatabase("QSQLITE");
-    veritabani.setDatabaseName("..\\veritabani.db");
+    veritabani.setDatabaseName("..\\kullanici.db");
 
     if(veritabani.open()){
         qDebug() << "Veri tabanina baglanildi.";
@@ -42,8 +42,12 @@ void kayit::on_pushButton_clicked()
     tempKullanici = ui->lineEdit_kullanici->text();
     tempSifre = ui->lineEdit_sifre->text();
 
+    qDebug() << tempSifre;
+
     QByteArray QBASifre = tempSifre.toLatin1();
     tempSifre = QString(QCryptographicHash::hash(QBASifre, QCryptographicHash::Md5).toHex());
+
+    qDebug() << tempSifre;
 
     QSqlQuery query;
 
