@@ -194,6 +194,7 @@ void MainWindow::hazir()
     qDebug() << veri;
 }
 ```
+[TCP Sunucu Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/tcp-sunucu)
 
 
 # Lablar
