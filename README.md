@@ -154,6 +154,47 @@ qry.exec("INSERT INTO tablo(val1, val2) VALUES('"+val1+"', '"+val2+"')");
 ```
 [SQLite Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/4-veritabani/veritabani-sqlite)
 
+# Soket
+* Soketler ile çalışmak için `.pro` uzantılı proje dosyasına `QT += network` komutu eklenmelidir.
+## TCP Sunucusu
+* `header` dosyası içerisine `#include <QTcpServer>` ve `#include <QTcpSoket>` eklenir.
+* Yine `header` dosyasına `QTcpServer *sunucu` ve `QTcpSoket *soket` ile ilgili nesneler tanımlanır.
+* Soket üzerinden `newConnection()`, `readyRead()` ve `disconnected()` gibi birçok `SIGNAL` üretilebilir. Örneğin,
+```
+connect(sunucu, SIGNAL(newConnection()), this, SLOT(yeniBaglanti()));
+connect(sunucu, SIGNAL(readyRead()), this, SLOT(hazir()));
+connect(sunucu, SIGNAL(disconnected(), this, SLOT(baglantiyiKapat())));
+```
+* Localhost üzerinde 1234 portunu dinlemek için
+```
+sunucu->listen(QHostAddress::Any, 1234)
+```
+* Sunucuya yeni bağlantı geldiğinde üretilen `SIGNAL` ile aşağıdaki fonksiyon tetiklenir.
+```
+void MainWindow::yeniBaglanti()
+{
+    soket = sunucu->nextPendingConnection();
+    soket->waitForBytesWritten();
+}
+```
+* Sunucuya yeni bağlantı geldiğinde üretilen `SIGNAL` ile aşağıdaki fonksiyon tetiklenir.
+```
+void MainWindow::yeniBaglanti()
+{
+    soket = sunucu->nextPendingConnection();
+    soket->waitForBytesWritten();
+}
+```
+Burada `sunucu->nextPendingConnection()` sıradaki bağlantıyı döndürür. `soket->waitForBytesWritten()` ise gelecek veri için bekletir.
+* Sunucuya yeni veri geldiğinde `SIGNAL` ile aşağıdaki fonksiyon tetiklenir.
+```
+void MainWindow::hazir()
+{
+    QByteArray veri = soket->readAll();
+    qDebug() << veri;
+}
+```
+
 
 # Lablar
 ## Lab-1
