@@ -208,6 +208,8 @@ soket->connectToHost("127.0.0.1", "1234");
 // QByteArray veri;
 soket->write(veri);
 ```
+[TCP İstemci Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/tcp-istemci)
+
 # Lablar
 ## Lab-1
 * [Temel konsol uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-1/temel-konsol_uygulamasi-lab_1)
