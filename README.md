@@ -1,3 +1,6 @@
+# Sunuş
+Qt ile olan geçmişimiz üniversite öğrenimimin ilk yıllarına dayanıyor. Python üzerinde bolca kullandıktan sonra C++ yeteneklerimi biraz daha geliştirebilmek için C++ ile QT kullanmaya devam ettim. Daha sonra projeler ve elimdeki işler sebebiyle uzunca bir süre QT'yi C++ ile birlikte kullanmadım. Geçtiğimiz günlerde Serhat Deniz ÖZTÜRK'ün "Uygulamalar ile QT" kitabını, D&R'da buldum ve aldım. Boş zamanlarımda bilgilerimi tazelemek ve bu sırada ihtiyaç duyduğumda kolayca bu bilgilere yeniden ulaşabilmek adına tuttuğum notları herkese açmamın daha faydalı olacağını düşünüyorum. Sadece benim ulaşabileceğim gizli bir repository'de kalmasındansa bu konuda araştırma yapan bir kişiye dahi faydası olabilirse ne mutlu.
+
 # QT Sınıfları
 ### QString ve QDebug 
 * QString std::string yerine kullanılır. Tüm qt fonksiyonları ile uyumludur ve hızlıdır.
@@ -220,3 +223,4 @@ soket->write(veri);
 * [Hesap makinesi](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-3/hesap-makinesi-lab_3)
 ## Lab-4
 * [Giriş ve Kayıt Uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-4/giris-ve-kayit-lab_4)
+
