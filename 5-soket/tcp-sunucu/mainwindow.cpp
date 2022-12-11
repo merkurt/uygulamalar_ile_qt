@@ -37,6 +37,7 @@ void MainWindow::hazir()
 {
     QByteArray veri = soket->readAll();
     qDebug() << veri;
+    ui->label->setText(veri);
 }
 
 void MainWindow::baglantiyiKapat()

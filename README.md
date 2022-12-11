@@ -194,9 +194,20 @@ void MainWindow::hazir()
     qDebug() << veri;
 }
 ```
-[TCP Sunucu Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/tcp-sunucu)
-
-
+[TCP Sunucu Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/tcp-sunucuQ)
+## TCP İstemcisi
+* `header` dosyası içerisine `#include <QTcpSocket>` eklenir.
+* Yine `header` dosyası içerisine `QTcpSocket *soket` şeklinde soket nesnesi tanımlanır.
+* 1234 portu üzerinden localhost'a bağlanmak için,
+```
+soket = new QTcpSocket;
+soket->connectToHost("127.0.0.1", "1234");
+```
+* Soket üzerinden veri göndermek için,
+```
+// QByteArray veri;
+soket->write(veri);
+```
 # Lablar
 ## Lab-1
 * [Temel konsol uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-1/temel-konsol_uygulamasi-lab_1)
