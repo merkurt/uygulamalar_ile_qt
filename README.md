@@ -213,6 +213,43 @@ soket->write(veri);
 ```
 [TCP İstemci Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/tcp-istemci)
 
+## UDP Sunucusu
+* `header` dosyasına `#include <QUdpSocket>` ekliyoruz.
+* Yine `header` dosyasına `QUdpSocket *soket` ile soket nesnesini tanımlıyoruz.
+* İstemciden veri geldiğinde tetiklenecek olan `hazir()` fonksiyonunu tanımlıyoruz ve bağlıyoruz.
+    * `header` dosyasına,
+    ```
+    public slots:
+        void hazir();
+    ```
+    * `cpp` dosyasında `MainWindow` constructor fonksiyonuna,
+    ```
+    connect(soket, SIGNAL(readyRead()), this, SLOT(hazir()));
+    ```
+* 1234 portundan localhost'a bind olmak için
+```
+soket = new QUdpSocket;
+soket->bind(QHostAddress::LoalHost, 1234);
+```
+* Gelen verilerin okunması,
+```
+QByteArray data;
+data.resize(soket->pendingDatagramSize());
+QHostAddress address;
+quint16 port;
+soket->readDatagram(data.data(), data.size(), &address, &port);
+```
+## UDP İstemcisi
+* `header` dosyasına `#include <QUdpSocket>` ekliyoruz.
+* Yine `header` dosyasına `QUdpSocket *soket` ile soket nesnesini tanımlıyoruz.
+* Sunucuya bir datagram göndermek için,
+```
+soket = new QUdpSocket;
+QByteArray veri;
+veri.append("Bu bir mesajdir.");
+soket->writeDatagram(veri, QHostAddress::LocalHost, 1234);
+```
+
 # Lablar
 ## Lab-1
 * [Temel konsol uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-1/temel-konsol_uygulamasi-lab_1)

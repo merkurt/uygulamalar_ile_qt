@@ -11,3 +11,5 @@ build-veritabani-sqlite-Desktop_Qt_5_9_2_MinGW_32bit-Debug
 build-giris-ve-kayit-lab_4-Desktop_Qt_5_9_2_MinGW_32bit-Debug
 build-tcp-sunucu-Desktop_Qt_5_9_2_MinGW_32bit-Debug
 build-tcp-istemci-Desktop_Qt_5_9_2_MinGW_32bit-Debug
+build-udp-istemci-Desktop_Qt_5_9_2_MinGW_32bit-Debug
+build-udp-sunucu-Desktop_Qt_5_9_2_MinGW_32bit-Debug
