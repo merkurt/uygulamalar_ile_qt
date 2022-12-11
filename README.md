@@ -239,6 +239,7 @@ QHostAddress address;
 quint16 port;
 soket->readDatagram(data.data(), data.size(), &address, &port);
 ```
+[UDP Sunucu Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/udp-sunucu)
 ## UDP İstemcisi
 * `header` dosyasına `#include <QUdpSocket>` ekliyoruz.
 * Yine `header` dosyasına `QUdpSocket *soket` ile soket nesnesini tanımlıyoruz.
@@ -249,6 +250,7 @@ QByteArray veri;
 veri.append("Bu bir mesajdir.");
 soket->writeDatagram(veri, QHostAddress::LocalHost, 1234);
 ```
+[UDP istemci Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/udp-istemci)
 
 # Lablar
 ## Lab-1
