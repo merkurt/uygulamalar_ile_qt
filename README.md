@@ -262,4 +262,6 @@ soket->writeDatagram(veri, QHostAddress::LocalHost, 1234);
 * [Hesap makinesi](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-3/hesap-makinesi-lab_3)
 ## Lab-4
 * [Giriş ve Kayıt Uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-4/giris-ve-kayit-lab_4)
-
+## Lab-6
+* [Basit Sohbet Uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-6/basitSohbetUygulamasi)
+* [Basit Sohbet Uygulaması - Server](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-6/basitSohbetUygulamasi-server)
