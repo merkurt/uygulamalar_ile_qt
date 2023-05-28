@@ -264,7 +264,9 @@ soket->writeDatagram(veri, QHostAddress::LocalHost, 1234);
 * [Giriş ve Kayıt Uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-4/giris-ve-kayit-lab_4)
 ## Lab-5
 * [Dosyadaki Tükçe Karakterleri Değiştirme](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-5/metin-dosyasi-lab_5)
-    * Burada input file notedefteri ile output file ise farklı bir text editör ile açılmalıdır.
+    * Burada input file not defteri ile output file ise farklı bir text editör ile açılmalıdır.
 ## Lab-6
 * [Basit Sohbet Uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-6/basitSohbetUygulamasi)
 * [Basit Sohbet Uygulaması - Server](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-6/basitSohbetUygulamasi-server)
+## Lab-7
+*  [Thread ile Dosya İşlemleri](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-7/dosyaIslemleri-thread)
