@@ -252,6 +252,67 @@ soket->writeDatagram(veri, QHostAddress::LocalHost, 1234);
 ```
 [UDP istemci Örnek](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/5-soket/udp-istemci)
 
+# QThread
+* Yeni bir C++ class'ı oluşturulur (Örn: `myThread`).
+* `header` dosyasına `#include <QThread>` eklenir.
+* Class tanımının sağ tarafına `: public QThread` ekleneerek QThread sınıfı miras alınır.
+```
+class myThread : public QThread
+{
+public:
+    myThread();
+}
+```
+* Class tanımının içerisine `run` isimli bir metot tanımlanır. İlgili metot `QThread` sınıfına ait `run()` metodunu `override` eder ve `start()` metodu çağırılığında thread bu `run()` metodunu koşturur.
+```
+class myThread : public QThread
+{
+public:
+    myThread();
+    void run();
+};
+```
+```
+void myThread::run()
+{
+    // do something..
+}
+
+```
+* Bir thread `start(priority)` ile başlatılır. 
+```
+myThread* thread1 = new myThread();
+thread1->start();
+```
+* `start()` metodu argüman olarak thread'in önceliğini alır. 
+    - QThread::IdlePriority
+    - QThread::LowestPriority
+    - QThread::LowPriority
+    - QThread::NormalPriority
+    - QThread::HighPriority
+    - QThread::HighestPriority
+    - QThread::TimeCriticalPriority
+    - QThread::InheritPriority
+
+    <br>Boş bırakıldığında öncelik `QThread::InheritPriority` olur.
+
+* Priority `run-time` sırasında da değiştirilebilir.
+```
+thread1->setPriority(QThread::TimeCriticalPriority);
+```
+## QThread Signal ve Slot
+* Threadler çeşitli signal ve slotlara sahiptir. Böylece birbirleri arasında senkronizasyon veya başlangıç-bitiş gibi durumlarda koşturulacak kod parçaları organize edilebilir.
+```
+myThread* thread1 = new myThread();
+myThread* thread2 = new myThread();
+
+thread1->start();
+connect(thread1, SIGNAL(started()), thread2, SLOT(terminate()));
+connect(thread2, SIGNAL(started()), thread1, SLOT(terminate()));
+```
+[QThread Sayıcı](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/7-thread/QThread)
+[QThread Signal ve Slot](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/7-thread/QThread-signal-slot)
+
 # Lablar
 ## Lab-1
 * [Temel konsol uygulaması](https://github.com/merkurt/uygulamalar_ile_qt/tree/main/lablar/lab-1/temel-konsol_uygulamasi-lab_1)
